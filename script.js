@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const navList = document.querySelector(".nav-list");
 
     menuToggle.addEventListener("click", () => {
-        navList.style.display = navList.style.display === "block" ? "none" : "block";
+        navList.classList.toggle("show");
     });
 
     document.getElementById("contact-form").addEventListener("submit", function(event) {
