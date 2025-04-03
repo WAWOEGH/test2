@@ -9,10 +9,10 @@
 </head>
 <body>
 
-    <!-- Header mit Logo & Burger-Menü -->
+    <!-- Header mit Logo & Menü-Button -->
     <header>
         <img src="assets/logo.png" alt="Logo" class="logo">
-        <button class="menu-toggle" aria-label="Menü öffnen">&#9776;</button>
+        <button class="menu-toggle">Menü</button>
         <nav class="nav">
             <ul>
                 <li><a href="#about">Über das Projekt</a></li>
@@ -20,6 +20,7 @@
                 <li><a href="#resources">Lesestoff</a></li>
                 <li><a href="#ethics">Ethik & Datenschutz</a></li>
                 <li><a href="#schedule">Zeitpläne</a></li>
+                <li><a href="#contact">Kontakt</a></li>
             </ul>
         </nav>
     </header>
@@ -33,14 +34,33 @@
         </div>
     </section>
 
-    <!-- News-Sektion -->
-    <section class="news">
-        <h2>Aktuelle News</h2>
-        <article>
-            <h3>Neue Entwicklungen im KI-Projekt</h3>
-            <p>Hier erscheinen die neuesten Updates.</p>
-        </article>
-    </section>
+    <!-- Container für News & Sidebar -->
+    <div class="container">
+        <aside class="sidebar">
+            <h3>News Themen</h3>
+            <ul>
+                <li><a href="#news1">KI & Sozialarbeit</a></li>
+                <li><a href="#news2">Neue Technologien</a></li>
+                <li><a href="#news3">Datenschutz in der KI</a></li>
+            </ul>
+        </aside>
+
+        <section class="news">
+            <h2>Aktuelle News</h2>
+            <article id="news1">
+                <h3>KI & Sozialarbeit</h3>
+                <p>Künstliche Intelligenz verändert die soziale Arbeit grundlegend...</p>
+            </article>
+            <article id="news2">
+                <h3>Neue Technologien</h3>
+                <p>Welche neuen KI-Technologien gibt es und wie können sie helfen?</p>
+            </article>
+            <article id="news3">
+                <h3>Datenschutz in der KI</h3>
+                <p>Wie gehen wir mit Datenschutz und ethischen Fragen um?</p>
+            </article>
+        </section>
+    </div>
 
     <!-- Kontaktformular -->
     <section id="contact" class="contact">
