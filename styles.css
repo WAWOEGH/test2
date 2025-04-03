@@ -1,3 +1,12 @@
+/* Allgemeine Farben */
+:root {
+    --primary: #e2001A;
+    --background: #f4f4f4;
+    --text: #333;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
 /* Navigation */
 .menu-toggle {
     background: var(--primary);
