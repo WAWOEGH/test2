@@ -1,0 +1,200 @@
+/* Farbvariablen */
+:root {
+    --primary: #e2001A;
+    --secondary1: #fecd1b;
+    --secondary2: #009ee0;
+    --secondary3: #ec7405;
+    --secondary4: #79b530;
+    --white: #ffffff;
+    --gray-bg: #f4f4f4;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Allgemeines Layout */
+body {
+    background-color: var(--gray-bg);
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+}
+
+header img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Container für Inhalt */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 20%;
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+.sidebar h3 {
+    color: var(--primary);
+}
+
+/* Links in der Sidebar */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li a {
+    color: var(--primary);
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.sidebar li a:hover {
+    background: var(--secondary1);
+    color: var(--white);
+    border-radius: 5px;
+}
+
+/* Hauptinhalt */
+.main-content {
+    width: 75%;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+/* Footer */
+footer {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+/* --- Menü Styling --- */
+.menu-toggle {
+    background: var(--primary);
+    color: var(--white);
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+/* Menü schwebend in der Mitte */
+.nav-list {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 30px var(--shadow);
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px; /* 50% größer */
+    text-align: center;
+    list-style: none;
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.nav-list.show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* Menüpunkte */
+.nav-list li {
+    margin: 15px 0;
+}
+
+.nav-list a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+/* Hover-Effekt mit Sekundärfarben */
+.nav-list li:nth-child(1) a:hover { color: var(--secondary1); } /* Gelb */
+.nav-list li:nth-child(2) a:hover { color: var(--secondary2); } /* Blau */
+.nav-list li:nth-child(3) a:hover { color: var(--secondary3); } /* Orange */
+.nav-list li:nth-child(4) a:hover { color: var(--secondary4); } /* Grün */
+.nav-list li:nth-child(5) a:hover { color: var(--secondary1); } /* Gelb */
+.nav-list li:nth-child(6) a:hover { color: var(--secondary2); } /* Blau */
+}
+
+
+
+/* Felder in einer Zeile */
+.contact form {
+    width: 50%;
+    align-items: center;
+}
+
+.contact label {
+    display: flex;
+    width: 50%;
+    font-weight: bold;
+    align-items: center;
+}
+
+.contact input,
+.contact textarea {
+    width: 50%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* Größeres Textfeld */
+.contact textarea {
+    height: 120px;
+    width: 50%;
+    align: center;
+}
+
+/* Senden-Button */
+.contact button {
+    background: var(--primary);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 51%;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.contact button:hover {
+    background: #c00016;
+}
