@@ -1,136 +1,119 @@
-/* Allgemeine Farben */
-:root {
-    --primary: #e2001A;
-    --background: #f4f4f4;
-    --text: #333;
-    --white: #ffffff;
-    --shadow: rgba(0, 0, 0, 0.1);
-}
-
-/* Grundlayout */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: var(--background);
-    color: var(--text);
-}
-
-/* Header */
-header {
-    background: var(--primary);
-    color: var(--white);
-    text-align: center;
-    padding: 20px;
-}
-
-.logo {
-    max-width: 100px;
-    margin-bottom: 10px;
-}
-
 /* Navigation */
-nav {
-    background: var(--white);
-    text-align: center;
-    padding: 10px;
-    border-bottom: 2px solid #ddd;
-}
-
 .menu-toggle {
     background: var(--primary);
     color: var(--white);
-    padding: 10px;
+    padding: 12px 20px;
     border: none;
     cursor: pointer;
+    font-size: 16px;
     display: block;
-    margin: 0 auto;
+    margin: 20px auto;
+    border-radius: 5px;
 }
 
+/* Menü schwebend in der Mitte des Bildschirms */
 .nav-list {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 30px var(--shadow);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
     list-style: none;
-    padding: 0;
-    display: none;
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
+/* Menü wird sichtbar */
+.nav-list.show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* Menüpunkte */
 .nav-list li {
-    display: block;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .nav-list a {
     color: var(--primary);
     text-decoration: none;
     font-weight: bold;
+    font-size: 18px;
+    display: block;
+    transition: color 0.3s ease;
 }
 
-/* Container */
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-/* Sidebar */
-.sidebar {
-    width: 20%;
-    background: var(--white);
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px var(--shadow);
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar a {
-    color: var(--primary);
-    text-decoration: none;
-}
-
-/* Hauptinhalt */
-.main-content {
-    width: 75%;
-    background: var(--white);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px var(--shadow);
+/* Hover-Effekt mit Sekundärfarben */
+.nav-list a:hover {
+    color: #ff9900; /* Beispiel für Sekundärfarbe */
 }
 
 /* Kontaktformular */
 .contact {
-    max-width: 600px;
-    margin: 40px auto;
+    max-width: 500px;
+    margin: 50px auto;
     padding: 20px;
     background: var(--white);
     border-radius: 10px;
     box-shadow: 0 2px 10px var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Felder in einer Zeile */
+.contact form {
+    width: 100%;
+}
+
+.contact label {
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+}
+
+.contact input,
+.contact textarea {
+    width: calc(100% - 120px);
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Formular-Felder horizontal anordnen */
+.contact div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Größeres Textfeld */
 .contact textarea {
     height: 120px;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
+/* Senden-Button */
+.contact button {
     background: var(--primary);
     color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    .sidebar {
-        width: 100%;
-    }
-    .main-content {
-        width: 100%;
-    }
+.contact button:hover {
+    background: #c00016;
 }
