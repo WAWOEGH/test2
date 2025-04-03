@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KI-Projekt - Wohlfahrtspflege</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="assets/logo.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#about">Über das Projekt</a></li>
+                <li><a href="#events">Termine und Buchung</a></li>
+                <li><a href="#resources">Lesestoff</a></li>
+                <li><a href="#ethics">Ethik und Datenschutz</a></li>
+                <li><a href="#schedule">Zeitpläne</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="news">
+            <h2>Aktuelle News</h2>
+            <article>
+                <h3>Neueste Entwicklungen im KI-Projekt</h3>
+                <p>Hier kommen die neuesten Informationen zum Projekt.</p>
+            </article>
+        </section>
+
+        <section class="contact">
+            <h2>Kontakt</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" required>
+
+                <label for="message">Nachricht:</label>
+                <textarea id="message" required></textarea>
+
+                <button type="submit">Senden</button>
+            </form>
+            <p id="form-response"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KI-Projekt Wohlfahrtspflege</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
