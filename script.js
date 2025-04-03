@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector(".nav");
+    const navList = document.querySelector(".nav-list");
 
     menuToggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
+        navList.style.display = navList.style.display === "block" ? "none" : "block";
     });
 
     document.getElementById("contact-form").addEventListener("submit", function(event) {
