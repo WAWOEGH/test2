@@ -1,98 +1,84 @@
-/* Farben */
+/* Allgemeine Farben */
 :root {
     --primary: #e2001A;
-    --gradient: linear-gradient(135deg, #e2001A, #a0000f);
-    --text: #ffffff;
-    --background: #f5f5f5;
-    --accent: #fecd1b;
+    --background: #f4f4f4;
+    --text: #333;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
 }
 
-/* Allgemeines Styling */
+/* Grundlayout */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background: var(--background);
-    color: #333;
+    color: var(--text);
 }
 
 /* Header */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: var(--gradient);
-    padding: 15px 20px;
-    position: relative;
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
 }
 
 .logo {
-    height: 50px;
+    max-width: 100px;
+    margin-bottom: 10px;
 }
 
-/* Menü */
-.nav {
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: var(--gradient);
+/* Navigation */
+nav {
+    background: var(--white);
     text-align: center;
-}
-
-.nav.active {
-    display: block;
-}
-
-.nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-.nav a {
-    display: block;
     padding: 10px;
-    color: var(--text);
-    text-decoration: none;
+    border-bottom: 2px solid #ddd;
 }
 
 .menu-toggle {
-    background: var(--accent);
+    background: var(--primary);
+    color: var(--white);
+    padding: 10px;
     border: none;
-    padding: 10px 20px;
     cursor: pointer;
+    display: block;
+    margin: 0 auto;
 }
 
-/* Hero */
-.hero {
-    background: var(--gradient);
-    color: var(--text);
-    text-align: center;
-    padding: 50px 20px;
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: none;
 }
 
-.cta-button {
-    background: var(--accent);
-    padding: 10px 20px;
+.nav-list li {
+    display: block;
+    margin: 10px 0;
+}
+
+.nav-list a {
+    color: var(--primary);
     text-decoration: none;
-    color: #333;
-    border-radius: 5px;
+    font-weight: bold;
 }
 
-/* Container für News */
+/* Container */
 .container {
     display: flex;
-    max-width: 1000px;
-    margin: 20px auto;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
 }
 
 /* Sidebar */
 .sidebar {
-    width: 25%;
-    background: var(--primary);
-    color: var(--text);
-    padding: 20px;
+    width: 20%;
+    background: var(--white);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow);
 }
 
 .sidebar ul {
@@ -101,25 +87,27 @@ header {
 }
 
 .sidebar a {
-    color: var(--accent);
+    color: var(--primary);
     text-decoration: none;
 }
 
-/* News */
-.news {
+/* Hauptinhalt */
+.main-content {
     width: 75%;
+    background: var(--white);
     padding: 20px;
-    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow);
 }
 
-/* Kontakt */
+/* Kontaktformular */
 .contact {
     max-width: 600px;
     margin: 40px auto;
     padding: 20px;
-    background: white;
+    background: var(--white);
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px var(--shadow);
 }
 
 .contact textarea {
@@ -130,8 +118,8 @@ header {
 footer {
     text-align: center;
     padding: 10px;
-    background: var(--gradient);
-    color: var(--text);
+    background: var(--primary);
+    color: var(--white);
 }
 
 /* Responsive */
@@ -142,7 +130,7 @@ footer {
     .sidebar {
         width: 100%;
     }
-    .news {
+    .main-content {
         width: 100%;
     }
 }
