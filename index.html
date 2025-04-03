@@ -5,53 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KI-Projekt - Wohlfahrtspflege</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
 
+    <!-- Header mit Logo & Burger-Menü -->
     <header>
         <img src="assets/logo.png" alt="Logo" class="logo">
-        <nav>
+        <button class="menu-toggle" aria-label="Menü öffnen">&#9776;</button>
+        <nav class="nav">
             <ul>
                 <li><a href="#about">Über das Projekt</a></li>
-                <li><a href="#events">Termine und Buchung</a></li>
+                <li><a href="#events">Termine & Buchung</a></li>
                 <li><a href="#resources">Lesestoff</a></li>
-                <li><a href="#ethics">Ethik und Datenschutz</a></li>
+                <li><a href="#ethics">Ethik & Datenschutz</a></li>
                 <li><a href="#schedule">Zeitpläne</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="news">
-            <h2>Aktuelle News</h2>
-            <article>
-                <h3>Neueste Entwicklungen im KI-Projekt</h3>
-                <p>Hier kommen die neuesten Informationen zum Projekt.</p>
-            </article>
-        </section>
+    <!-- Hero-Bereich -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>KI in der Wohlfahrtspflege</h1>
+            <p>Ein innovatives Projekt zur Unterstützung der sozialen Arbeit.</p>
+            <a href="#contact" class="cta-button">Mehr erfahren</a>
+        </div>
+    </section>
 
-        <section class="contact">
-            <h2>Kontakt</h2>
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" required>
+    <!-- News-Sektion -->
+    <section class="news">
+        <h2>Aktuelle News</h2>
+        <article>
+            <h3>Neue Entwicklungen im KI-Projekt</h3>
+            <p>Hier erscheinen die neuesten Updates.</p>
+        </article>
+    </section>
 
-                <label for="email">E-Mail:</label>
-                <input type="email" id="email" required>
+    <!-- Kontaktformular -->
+    <section id="contact" class="contact">
+        <h2>Kontakt</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
 
-                <label for="message">Nachricht:</label>
-                <textarea id="message" required></textarea>
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" required>
 
-                <button type="submit">Senden</button>
-            </form>
-            <p id="form-response"></p>
-        </section>
-    </main>
+            <label for="message">Nachricht:</label>
+            <textarea id="message" required></textarea>
 
+            <button type="submit">Senden</button>
+        </form>
+        <p id="form-response"></p>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 KI-Projekt Wohlfahrtspflege</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
